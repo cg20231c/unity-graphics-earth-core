@@ -135,6 +135,34 @@ The rate of emission can be constant or can vary over the lifetime of the system
 
 If **Rate over Time** is active, then the desired number of particles are emitted each second regardless of how the parent object moves. Additionally, you can add bursts of extra particles that appear at specific times (for example, a steam train chimney that produces puffs of smoke).
 
+## Shape Module
+This module defines the the volume or surface from which particles can be emitted, and the direction of the start velocity. The **Shape** property defines the shape of the emission volume, and the rest of the module properties vary depending on the Shape you choose.
+
+All shapes (except Mesh) have properties that define their dimensions, such as the **Radius** property. To edit these, drag the handles on the wireframe emitter shape in the Scene view. The choice of shape affects the region from which particles can be launched, but also the initial direction of the particles. For example, a Sphere emits particles outward in all directions, a **Cone** emits a diverging stream of particles, and a **Mesh** emits particles in directions that are normal to the surface.
+
+
+![ShapeModule](/img/ShapeModule.png)
+
+
+Available shapes :
+- Sphere
+- Hemisphere
+- Cone
+- Donut
+- Box
+- Mesh
+- Mesh Renderer
+- Skinned Mesh Renderer
+- Sprite
+- Sprite Renderer
+- Circle
+- Edge
+- Rectangle
+
+
+![Shapes](/img/Shapes.png)
+
+
 ## Collision Module
 Collision module allows your particles to collides with other game object in your scene.
 This thing decides how particles bump into stuff in your scene. Pick Planes or World in the first menu to say if your collision rules are for flat surfaces or everything in the world.  
