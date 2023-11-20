@@ -108,7 +108,20 @@ Burst emission is exclusive to Collision, Trigger, Death, and Manual events. Pro
 
 Velocity inheritance is controlled through the Inherit Velocity module.  
 
-Emit Probability property adjusts the likelihood of sub-emitter events, with a value of 1 guaranteeing trigger and lower values reducing probability.
+Emit Probability property adjusts the likelihood of sub-emitter events, with a value of 1 guaranteeing trigger and lower values reducing probability.  
+
+## External Forces Module
+External forces module make the particle affected by windzone in your scene
+| Property | Function |
+| -------- | -------- |
+|Multiplier|Scale value applied to wind zone forces.|
+|Influence Filter	|Choose whether to include Force Fields based on a Layer Mask, or via an explicit List.|
+|List|Define an explicit list of Force Fields that can affect this Particle System. This appears when the Influence Filter is set to List.|
+|Influence Mask	|Use a Layer Mask to determine which Force Fields affect this Particle System. This appears when the Influence Filter is set to Layer Mask.This is set to Everything by default, but you can enable or disable the following options individually: Nothing (automatically unticks all other options, turning them off); Everything (automatically ticks all other options, turning them on); Default; TransparentFX; Ignore Raycast; Water; UI; PostProcessing |
+
+## Scripting Particle System
+Script interface for the Built-in Particle System.  
+[Scripting Documentation](https://docs.unity3d.com/ScriptReference/ParticleSystem.html)
 
 ## Creating Simple Rain
 1. Create a Particle System rename it into rain and reset the transform, make the position y value to 15  
