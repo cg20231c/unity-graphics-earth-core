@@ -20,6 +20,11 @@ To provide flexibility when you author a particle system, Unity offers two solut
 | Script interaction | You can use C# scripts to fully customize the Particle System at runtime. You can read from and write to each particle in a system, and respond to collision events. The Particle System component also provides playback control API. This means that you can use scripts to play and pause the effect, and simulate the effect with custom step sizes. | You can expose graph properties and access them through C# scripts to customize instances of the effect. You can also use the Event Interface to send custom events with attached data that the graph can process. The Visual Effect component also provides playback control API. This means that you can use scripts to play and pause the effect, and simulate the effect with custom step sizes. |
 | Frame buffers | No | In the High Definition Render Pipeline, provides access to the color and depth buffer. For example, you can sample the color buffer and use the result to set particle color, or you can use the depth buffer to simulate collisions. |
 
+Unity’s Built-in Particle System allows you to create effects for every platform that Unity supports. The Built-in Particle System simulates particle behavior on the CPU which allows for the following main benefits:
+
+- You can use C# scripts to interact with a system and the individual particles within it.
+- Particle systems can use Unity’s underlying physics system and thus interact with Colliders in your Scene.
+
 
 ## Collision Module
 Collision module allows your particles to collides with other game object in your scene.
