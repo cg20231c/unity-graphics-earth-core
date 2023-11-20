@@ -49,7 +49,7 @@ The Particle System component has many properties, and for convenience, the Insp
 
 The Particle System component has a powerful set of properties that are organized into modules for ease of use. This section of the manual covers each of the modules in detail. The list of modules is as follows:
 
-# List of Modules
+List of Modules
 - [Main Module](#main-module)
 - [Emission Module](#emission-module)
 - [Shape Module](#shape-module)
