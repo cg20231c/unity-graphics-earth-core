@@ -25,6 +25,12 @@ Unity’s Built-in Particle System allows you to create effects for every platfo
 - You can use C# scripts to interact with a system and the individual particles within it.
 - Particle systems can use Unity’s underlying physics system and thus interact with Colliders in your Scene.
 
+The Built-in Particle System uses a component, so placing a Particle System in a Scene is a matter of adding a pre-made GameObject (menu: **GameObject** > **Effects** > **Particle System**) or adding the component to an existing GameObject (menu: **Component > Effects > Particle System**). Because the component is quite complicated, the Inspector is divided into a number of collapsible sub-sections or **modules** that each contain a group of related properties.
+
+When a GameObject with a Particle System is selected, the **Scene** view contains a small **Particle Effect** panel, with some simple controls that are useful for visualising changes you make to the system’s settings.
+
+![ParticleEffectPanel](/img/ParticleEffectPanel.png)
+
 
 ## Collision Module
 Collision module allows your particles to collides with other game object in your scene.
