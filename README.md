@@ -59,16 +59,18 @@ List of Modules
 - [Shape Module](#shape-module)
 - [Velocity over Lifetime Module](#velocity-over-lifetime-module)
 - [Noise Module](#noise-module)
-- [Limit Velocity over Lifetime Module](#limit-velocity-over-lifetime-module)
+- Lifetime Module
+  - [Limit Velocity over Lifetime Module](#limit-velocity-over-lifetime-module)
+  - [Force over Lifetime Module](#force-over-lifetime-module)
+  - [Color over Lifetime Module](#color-over-lifetime-module)
+  - [Size over Lifetime Module](#size-over-lifetime-module)
+  - [Rotation over Lifetime Module](#rotation-over-lifetime-module)
 - [Inherit Velocity Module](#inherit-velocity-module)
-- [Lifetime by Emitter Speed Module](#lifetime-by-emitter-speed-module)
-- [Force over Lifetime Module](#force-over-lifetime-module)
-- [Color over Lifetime Module](#color-over-lifetime-module)
-- [Color by Speed Module](#color-by-speed-module)
-- [Size over Lifetime Module](#size-over-lifetime-module)
-- [Size by Speed Module](#size-by-speed-module)
-- [Rotation over Lifetime Module](#rotation-over-lifetime-module)
-- [Rotation by Speed Module](#rotation-by-speed-module)
+- Speed Module
+  - [Lifetime by Emitter Speed Module](#lifetime-by-emitter-speed-module)
+  - [Color by Speed Module](#color-by-speed-module)
+  - [Size by Speed Module](#size-by-speed-module)
+  - [Rotation by Speed Module](#rotation-by-speed-module)
 - [Triggers Module](#triggers-module)
 - [Texture Sheet Animation Module](#texture-sheet-animation-module)
 - [Lights Module](#lights-module)
@@ -162,6 +164,106 @@ Available shapes :
 
 ![Shapes](/img/Shapes.png)
 
+## Renderer Module
+The Renderer module’s settings determine how a particle’s image or Mesh is transformed, shaded and overdrawn by other particles.
+
+## Lifetime Module
+  ### Velocity over Lifetime module
+  The Velocity over Lifetime module allows you to control the velocity of particles over their lifetime.
+| **Property** | **Function** |
+| -------- | -------- |
+|Linear X, Y, Z  |  Linear velocity of particles in the X, Y and Z axes.|
+|Space | Specifies whether the Linear X, Y, Z axes refer to local or world space.|
+|Orbital X, Y, Z |  Orbital velocity of particles around the X, Y and Z axes.|
+|Offset X, Y, Z |  The position of the center of orbit, for orbiting particles.|
+|Radial |  Radial velocity of particles away from/towards the center position.|
+|Speed Modifier |  Applies a multiplier to the speed of particles, along/around their current direction of travel.|
+
+  ### Limit Velocity over Lifetime Module
+  This module controls how the speed of particles is reduced over their lifetime.
+| **Property** | **Function** |
+| -------- | -------- |
+|Separate Axes  |  Splits the axes up into separate X, Y and Z components.|
+|Speed | Sets the speed limit of the particles.|
+|Space |  Selects whether the speed limitation refers to local or world space. This option is only available when **Separate Axes** is enabled.|
+|Dampen |  The fraction by which a particle’s speed is reduced when it exceeds the speed limit.|
+|Drag |  	Applies linear drag to the particle velocities.|
+|Multiply by Size |  	When enabled, larger particles are affected more by the drag coefficient.|
+|Multiply by Velocity |  When enabled, faster particles are affected more by the drag coefficient.|
+
+  ### Lifetime by Emitter Speed module
+  This module controls the initial lifetime of each particle based on the speed of the emitter when the particle spawns. It multiplies the start lifetime of particles by a value that depends on the speed of the object that spawned them. For most Particle Systems, this is the GameObject velocity, but for sub-emitters, the velocity comes from the parent particle that the sub-emitter particle originated from.
+<table>
+    <thead>
+        <tr>
+            <th><b>Property<b></th>
+            <th><b>Function<b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4>Multiplier</td>
+            <td rowspan=4>The multiplier to apply to the particle’s initial lifetime. The module uses this value differently depending on the curve mode you set. The curve modes are: 
+             <ul>
+               <li> Constant: Uses the constant multiplier value you set for this property. Using this curve mode ignores the Speed Range property.</li>
+               <li> Curve: Takes the emitter’s speed, maps it to a value between 0 and 1 based on the Speed Range, then uses the normalized value to sample the curve.</li>
+               <li> Random Between Two Constants: Sets a random multiplier for each particle between the two values you set for this property. Using this curve mode ignores the Speed Range property.</li>
+               <li> Random Between Two Curves: Takes the emitter’s speed, maps it to a value between 0 and 1 based on the Speed Range, then uses the normalized value to sample each curve. For each particle, the module sets the multiplier to a random value between the two samples.</ul>
+            </td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td rowspan=4>Speed Range</td>
+            <td rowspan=4>The multiplier to apply to the particle’s initial lifetime. The module uses this value differently depending on the curve mode you set. The curve modes are: 
+              The minimum and maximum emitter speeds the Particle System maps to a value along the Multiplier curve. If the emitter’s speed is equal to the first value, the multiplier is the value at the start of the curve. If the emitter’s speed is equal to the second value, the multiplier is the value at the end of the curve. This property is only relevant if the curve mode for Multiplier is set to Curve or Random Between Two Curves.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+  ### Force over Lifetime module
+  Particles can be accelerated by forces (such as wind or attraction) that are specified in this module.
+| **Property** | **Function** |
+| -------- | -------- |
+|X, Y, Z |  Force applied to each particle in the X, Y and Z axes.|
+|Space | 	Selects whether the force is applied in local or world space.|
+|Randomize | 	When using the Two Constants or Two Curves modes, this causes a new force direction to be chosen on each frame within the defined ranges. This causes more turbulent, erratic movement.|
+
+  ### Color over Lifetime module
+  This module specifies how a particle’s color and transparency changes over its lifetime.
+| **Property** | **Function** |
+| -------- | -------- |
+|Color  |  The color gradient of a particle over its lifetime. The very left-hand point of the gradient bar indicates the beginning of the particle’s life, and the very right-hand side of the gradient bar indicates the end of the particle’s life. In the image above, the particle starts off orange, fades in opacity over time, and is invisible by the time its life ends.|
+
+  ### Size over Lifetime module
+  Many effects involve a particle changing size according to a curve, which can be set in this module.
+| **Property** | **Function** |
+| -------- | -------- |
+|Separate Axes  |  	Control the particle size independently on each axis.|
+|Size | A curve which defines how the particle’s size changes over its lifetime.|
+
+  ### Rotation over Lifetime Module
+  Here, you can configure particles to rotate as they move.
+| **Property** | **Function** |
+| -------- | -------- |
+|Separate Axes  |  Control rotation independently for each axis of rotation.|
+|Angular Velocity | Sets the speed limit of the particles.|
+
+## Inherit Velocity module
+This module is part of the Particle System component. When you create a new Particle System GameObject, or add a Particle System component to an exiting GameObject, Unity adds the Inherit Velocity module to the Particle System. By default, Unity disables this module.
+| **Property** | **Function** |
+| -------- | -------- |
+|**Mode**  |  Specifies how the emitter velocity is applied to particles.|
+|  Current |  The emitter’s current velocity will be applied to all particles on every frame. For example, if the emitter slows down, all particles will also slow down.|
+|  Initial |  The emitter’s velocity will be applied once, when each particle is born. Any changes to the emitter’s velocity made after a particle is born will not affect that particle.|
+|**Multiplier** |  The proportion of the emitter’s velocity that the particle should inherit.|
+
+## Triggers Module
+The Built-in Particle System’s Triggers module allows you to access and modify particles based on their interaction with one or more Colliders in the Scene.
+
+## Custom Data Module
+The Custom Data module allows you to define custom data formats in the Editor to be attached to particles.
 
 ## Collision Module
 Collision module allows your particles to collides with other game object in your scene.
