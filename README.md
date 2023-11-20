@@ -72,11 +72,11 @@ List of Modules
   - [Size by Speed Module](#size-by-speed-module)
   - [Rotation by Speed Module](#rotation-by-speed-module)
 - [Triggers Module](#triggers-module)
+- [Renderer Module](#renderer-module)
 - [Texture Sheet Animation Module](#texture-sheet-animation-module)
 - [Lights Module](#lights-module)
 - [Trails Module](#trails-module)
 - [Custom Data Module](#custom-data-module)
-- [Renderer Module](#renderer-module)
 - [Collision Module](#collision-module)
 - [Sub Emitters Module](#sub-emitters-module)
 - [External Forces Module](#external-forces-module)
@@ -164,8 +164,32 @@ Available shapes :
 
 ![Shapes](/img/Shapes.png)
 
-## Renderer Module
-The Renderer module’s settings determine how a particle’s image or Mesh is transformed, shaded and overdrawn by other particles.
+## Velocity Over Lifetime Module
+Velocity Over Lifetime Module allows you to adjust the velocity of the particles over it's lifetime. Its is suitable for effects like smoke dissipating over time or sparks slowing down as they travel.
+
+![VelocityOverLifetime](/img/Velocity-Over-Lifetime.png)
+
+| Parameter | Function |
+| -------- | -------- |
+|Linear|Used to adjust the linear velocity of the particles to the intended|
+|Orbital|Used to adjust the orbital velocity of the particles to the intended|
+|Radial|Used to adjust the radial value|
+|Speed|Used to adjust the speed value|
+
+## Noise Module
+Noise Module allows you to add variations to the movement of the particles.
+
+![Noise](/img/Noise.png)
+
+| Parameter | Function |
+| -------- | -------- |
+|Strength|Used to adjust the variations|
+|Frequency|Used to adjust how often for the particles to change it's movement|
+|Scroll Speed|Used to adjust the noise overtime|
+|Octaves|Used to adjust how many layer of Noise it has|
+|Position Amount|Used to adjust how the position affected by the Noise, if 0 then nothing happen|
+|Rotation Amount|Used to adjust how the rotation affected by the Noise, if 0 then nothing happen|
+|Size Amount|Used to adjust how the size affected by the Noise, if 0 then nothing happen|
 
 ## Lifetime Module
   ### Velocity over Lifetime module
@@ -259,8 +283,116 @@ This module is part of the Particle System component. When you create a new Part
 |  Initial |  The emitter’s velocity will be applied once, when each particle is born. Any changes to the emitter’s velocity made after a particle is born will not affect that particle.|
 |**Multiplier** |  The proportion of the emitter’s velocity that the particle should inherit.|
 
+## Speed Module
+  ### Color By Speed Module
+Color By Speed Module allows you to adjusts the color of the particles based on their speed. It is suitable for effects where particle color indicates speed, such as a flame changing from yellow to red as it accelerates.
+
+![ColorBySpeed](/img/Color-By-Speed.png)
+
+| Parameter | Function |
+| -------- | -------- |
+|Color|Used to adjust the color you want to change with speed|
+|Speed Range|Used to adjust the range of the speed for the color changes|
+
+  ### Size By Speed Module
+Size By Speed Module allows you to adjusts the size of the particles based on their speed. It is suitable to make the particles grow or shrink as they move.
+
+![SizeBySpeed](/img/Size-By-Speed.png)
+
+| Parameter | Function |
+| -------- | -------- |
+|Size|Used to adjust the size you want to change with speed|
+|Speed Range|Used to adjust the range of the speed for the size changes|
+
+  ### Rotation By Speed Module
+Rotation By Speed Module allows you to adjusts the rotation of the particles based on their speed. It is suitable for creating swirling effects.
+
+![RotationBySpeed](/img/Rotation-By-Speed.png)
+
+| Parameter | Function |
+| -------- | -------- |
+|Angular Velocity|Used to adjust the angular velocity|
+|Speed Range|Used to adjust the range of the speed|
+
 ## Triggers Module
 The Built-in Particle System’s Triggers module allows you to access and modify particles based on their interaction with one or more Colliders in the Scene.
+
+## Renderer Module
+Renderer Module allows you to add sprites to the particle system.
+
+To make a Material for renderer, you can use this step:
+1. Download from the github the file named **Meledak.png**.
+2. Import the picture with right click at assets in view project.
+3. Click **import new assets** and pick Meledak.png and then click "Create" and "Material"
+4. If you check the material you have made, you can see the inspector view .
+
+![Renderer1](/img/Renderer1.png)
+
+5. In **Shader** click **Standard** and change it with **Particles** then **Standard Unlit**.
+
+![Renderer2](/img/Renderer2.png)
+
+6. In **Rendering Mode** change **Opaque** to **Fade**.
+7. Drag the **Meledak.png** to the box on the left side of **Albedo**
+8. Open the **Inspectore** of the **Particle System** and then click **Renderer** and the box to enable it.
+
+![Renderer3](/img/Renderer3.png)
+
+9. Drag the **Material** Asset that have been made to the **Material** like in the picture.
+
+## Texture Sheet Animation Module
+Texture Sheet Animation Module allow you to animate sprites sheet. This is how to use it:
+1. Open the **Particle System**'s inspector, search for **Texture Sheet Animation** and click it with the box next to it.
+2. It will open this inspector:
+
+![Texture-Sheet-Animation](/img/Texture-Sheet-Animation.png)
+
+3. Change the **X** with 5 and the **Y** with 2. This score is based on the sum of **X** and **Y** pictures in the Meledak.png which is 5 for the **X** and 2 for the **Y**.
+4. Particles now have animation.
+
+The result is like this:
+
+![Texture-Sheet-Animation-Hasil](/img/Texture-Sheet-Animation-Hasil.png)
+
+## Lights Module
+Lights Module allow the particles to cast light. This is how to use it:
+1. Make a **light** in the **Hierarchy** with a right click and click **Light** and then **Point Light**.
+2. It will open this inspector:
+
+![Light1](/img/Light1.png)
+
+3. Choose the color that you like to be made a light for the **Particles** at the **Color** section.
+4. Open the **Particle System** and click **Lights** with the box next to it.
+
+![Light2](/img/Light2.png)
+
+5. Drag the **Light** that has been made to the **Light** section.
+6. Adjust the parameter with what you want or you can follow the picture above. 
+
+The result will be like this:
+
+![Light-Hasil](/img/Light-Hasil.png)
+
+NOTE: If the light from the particle doesn't show up, it means there are not any place to be illuminated. This problem can be solved with adding a new object in the hierarchy. You can make a terrain from right-clicking in the **hierarchy** and the choose **3D Object** then **Terrain**.
+
+## Trails Module
+Trails Module allows you to add effects like a tail of long line. There are 2 kind of Trails in unity that you can use, **Particles** and **Ribbon**.
+
+The Configuration of the **Particles** is like this:
+
+![Trails-Particles](/img/Trails-Particles.png)
+
+The result for the **Particles** is like this:
+
+![Trails-Particles-Result](/img/Trails-Particles-Result.png)
+
+The Configuration of the **Ribbon** is like this:
+
+![Trails-Ribbon](/img/Trails-Ribbon.png)
+
+The result for the **Ribbon** is like this:
+
+![Trails-Ribbon-Result](/img/Trails-Ribbon-Result.png)
 
 ## Custom Data Module
 The Custom Data module allows you to define custom data formats in the Editor to be attached to particles.
