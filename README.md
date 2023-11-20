@@ -166,6 +166,8 @@ Dampen and Bounce properties are handy for solid objects—like gravel bouncing 
 ## Sub Emitters Module
 Particle Systems allow for diverse effects at different lifetimes using sub-emitters. These are ordinary Particle System objects, creating nested effects.  
 ![Alt text](img/subemmiter.png)
+
+
 To trigger a sub-emitter, you can use these are the conditions:
 
 - Birth: When the particles are created.  
