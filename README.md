@@ -29,8 +29,10 @@ The Built-in Particle System uses a component, so placing a Particle System in a
 
 When a GameObject with a Particle System is selected, the **Scene** view contains a small **Particle Effect** panel, with some simple controls that are useful for visualising changes you make to the system’s settings.
 
+
 ![SceneAndPanel](/img/SceneAndPanel.png)
 ![ParticleEffectPanel](/img/ParticleEffectPanel.png) 
+
 
 | Part of the panel | Function |
 | :---------------- | :--- |
@@ -45,7 +47,9 @@ When a GameObject with a Particle System is selected, the **Scene** view contain
 
 The Particle System component has many properties, and for convenience, the Inspector organises them into collapsible sections called “modules”.
 
+
 ![InspectorAndMainModules](/img/InspectorAndMainModules.png)
+
 
 The Particle System component has a powerful set of properties that are organized into modules for ease of use. This section of the manual covers each of the modules in detail. The list of modules is as follows:
 
@@ -65,15 +69,15 @@ List of Modules
 - [Size by Speed Module](#size-by-speed-module)
 - [Rotation over Lifetime Module](#rotation-over-lifetime-module)
 - [Rotation by Speed Module](#rotation-by-speed-module)
-- [External Forces Module](#external-forces-module)
-- [Collision Module](#collision-module)
 - [Triggers Module](#triggers-module)
-- [Sub Emitters Module](#sub-emitters-module)
 - [Texture Sheet Animation Module](#texture-sheet-animation-module)
 - [Lights Module](#lights-module)
 - [Trails Module](#trails-module)
 - [Custom Data Module](#custom-data-module)
 - [Renderer Module](#renderer-module)
+- [Collision Module](#collision-module)
+- [Sub Emitters Module](#sub-emitters-module)
+- [External Forces Module](#external-forces-module)
 
 ## Collision Module
 Collision module allows your particles to collides with other game object in your scene.
