@@ -33,7 +33,7 @@ When a GameObject with a Particle System is selected, the **Scene** view contain
 ![ParticleEffectPanel](/img/ParticleEffectPanel.png) 
 
 | Part of the panel | Function |
-| :--- | :--- |
+| :---------------- | :--- |
 | Playback Speed | To speed up or slow down the particle simulation. |
 | Playback Time |  Indicates the time elapsed since the system was started; this may be faster or slower than real time depending on the playback speed.|
 | Particle (Count) | Indicates how many particles are currently in the system. |
