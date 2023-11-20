@@ -384,7 +384,7 @@ The Configuration of the **Particles** is like this:
 
 The result for the **Particles** is like this:
 
-![Trails-Particles-Result](/img/Trails-Particles-Result.png)
+![Trails-Particles-Hasil](/img/Trails-Particles-Result.png)
 
 The Configuration of the **Ribbon** is like this:
 
@@ -392,7 +392,7 @@ The Configuration of the **Ribbon** is like this:
 
 The result for the **Ribbon** is like this:
 
-![Trails-Ribbon-Result](/img/Trails-Ribbon-Result.png)
+![Trails-Ribbon-Hasil](/img/Trails-Ribbon-Result.png)
 
 ## Custom Data Module
 The Custom Data module allows you to define custom data formats in the Editor to be attached to particles.
