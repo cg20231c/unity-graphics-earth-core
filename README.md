@@ -43,6 +43,38 @@ When a GameObject with a Particle System is selected, the **Scene** view contain
 | Show Bounds | Show world space bounding boxes |
 | Show Only Selected | If disabled, all unselected Particle Systems in the current effect will be hidden. | 
 
+The Particle System component has many properties, and for convenience, the Inspector organises them into collapsible sections called “modules”.
+
+![InspectorAndMainModules](/img/InspectorAndMainModules.png)
+
+The Particle System component has a powerful set of properties that are organized into modules for ease of use. This section of the manual covers each of the modules in detail. The list of modules is as follows:
+
+# List of Modules
+- [Main Module](#main-module)
+- [Emission Module](#emission-module)
+- [Shape Module](#shape-module)
+- [Velocity over Lifetime Module](#velocity-over-lifetime-module)
+- [Noise Module](#noise-module)
+- [Limit Velocity over Lifetime Module](#limit-velocity-over-lifetime-module)
+- [Inherit Velocity Module](#inherit-velocity-module)
+- [Lifetime by Emitter Speed Module](#lifetime-by-emitter-speed-module)
+- [Force over Lifetime Module](#force-over-lifetime-module)
+- [Color over Lifetime Module](#color-over-lifetime-module)
+- [Color by Speed Module](#color-by-speed-module)
+- [Size over Lifetime Module](#size-over-lifetime-module)
+- [Size by Speed Module](#size-by-speed-module)
+- [Rotation over Lifetime Module](#rotation-over-lifetime-module)
+- [Rotation by Speed Module](#rotation-by-speed-module)
+- [External Forces Module](#external-forces-module)
+- [Collision Module](#collision-module)
+- [Triggers Module](#triggers-module)
+- [Sub Emitters Module](#sub-emitters-module)
+- [Texture Sheet Animation Module](#texture-sheet-animation-module)
+- [Lights Module](#lights-module)
+- [Trails Module](#trails-module)
+- [Custom Data Module](#custom-data-module)
+- [Renderer Module](#renderer-module)
+
 ## Collision Module
 Collision module allows your particles to collides with other game object in your scene.
 This thing decides how particles bump into stuff in your scene. Pick Planes or World in the first menu to say if your collision rules are for flat surfaces or everything in the world.  
