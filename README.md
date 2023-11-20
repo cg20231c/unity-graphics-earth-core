@@ -118,6 +118,23 @@ The system emits particles for a specific duration, and can be set to emit conti
 
 The **Start** properties (**lifetime**, **speed**, **size**, **rotation** and **color**) specify the state of a particle on emission. You can specify a particle’s width, height and depth independently, using the **3D Start Size** property. The **3D Start Size** property allows you to specify a particle’s width, height and depth independently. In the Particle System **Main** module, check the **3D Start Size** checkbox, and enter the values for the initial x (width), y (height) and z (depth) of the particle.
 
+## Emission Module
+The properties in this module affect the rate and timing of Particle System emissions.
+
+
+![EmissionModule](/img/EmissionModule.png)
+
+
+| Property | Function |
+| :--- | :--- |
+| Rate over Time | The number of particles emitted per unit of time. |
+| Rate over Distance | The number of particles emitted per unit of distance moved. |
+| Bursts | A burst is an event which spawns particles. These settings allow particles to be emitted at specified times. **Time** is for setting the time (in seconds, after the Particle System begins playing) at which to emit the burst, **Count** is for setting a value for the number of particles that may be emitted, **Cycles** is for setting a value for how many times to play the burst, **Interval** is for setting a value for the time (in seconds) between when each cycle of the burst is triggered, **Probability** is for controlling how likely it is that each burst event spawns particles. A higher value makes the system produce more particles, and a value of 1 guarantees that the system produces particles. |
+
+The rate of emission can be constant or can vary over the lifetime of the system according to a curve. If **Rate over Distance** mode is active, a certain number of particles are released per unit of distance moved by the parent object. This is very useful for simulating particles that are actually created by the motion of the object (for example, dust from a car’s wheels on a dirt track).
+
+If **Rate over Time** is active, then the desired number of particles are emitted each second regardless of how the parent object moves. Additionally, you can add bursts of extra particles that appear at specific times (for example, a steam train chimney that produces puffs of smoke).
+
 ## Collision Module
 Collision module allows your particles to collides with other game object in your scene.
 This thing decides how particles bump into stuff in your scene. Pick Planes or World in the first menu to say if your collision rules are for flat surfaces or everything in the world.  
