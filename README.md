@@ -29,8 +29,19 @@ The Built-in Particle System uses a component, so placing a Particle System in a
 
 When a GameObject with a Particle System is selected, the **Scene** view contains a small **Particle Effect** panel, with some simple controls that are useful for visualising changes you make to the system’s settings.
 
-![ParticleEffectPanel](/img/ParticleEffectPanel.png)
+![SceneAndPanel](/img/SceneAndPanel.png)
+![ParticleEffectPanel](/img/ParticleEffectPanel.png) 
 
+| Part of the panel | Function |
+| :--- | :--- |
+| Playback Speed | To speed up or slow down the particle simulation. |
+| Playback Time |  Indicates the time elapsed since the system was started; this may be faster or slower than real time depending on the playback speed.|
+| Particle (Count) | Indicates how many particles are currently in the system. |
+| Speed Range | Indicate the start speed of the particle, applied in the startin direction. |
+| Simulate layers | Automatically preview all looping Particle Systems on the chosen layers, in addition to selected Game Objects. |
+| Resimulate | If enabled, the Particle Systems will show changes made to the system immediately (including changes made to the Particle System Transform). |
+| Show Bounds | Show world space bounding boxes |
+| Show Only Selected | If disabled, all unselected Particle Systems in the current effect will be hidden. | 
 
 ## Collision Module
 Collision module allows your particles to collides with other game object in your scene.
