@@ -538,3 +538,6 @@ lifetime loss > 0.4
 ![Alt text](img/step8.png)  
 Result:  
 ![Alt text](img/result.gif) 
+
+
+ASSET = https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325 
