@@ -191,8 +191,17 @@ Noise Module allows you to add variations to the movement of the particles.
 |Rotation Amount|Used to adjust how the rotation affected by the Noise, if 0 then nothing happen|
 |Size Amount|Used to adjust how the size affected by the Noise, if 0 then nothing happen|
 
+## Renderer Module
+
+  ![renderer](/img/renderer.png)
+
+The Renderer module’s settings determine how a particle’s image or Mesh is transformed, shaded and overdrawn by other particles.
+
 ## Lifetime Module
   ### Velocity over Lifetime module
+  
+  ![velocity_over_lifetime](/img/velocity_over_lifetime.png)
+  
   The Velocity over Lifetime module allows you to control the velocity of particles over their lifetime.
 | **Property** | **Function** |
 | -------- | -------- |
@@ -204,6 +213,9 @@ Noise Module allows you to add variations to the movement of the particles.
 |Speed Modifier |  Applies a multiplier to the speed of particles, along/around their current direction of travel.|
 
   ### Limit Velocity over Lifetime Module
+  
+  ![limit_velocity_over_lifetime](/img/limit_velocity_over_lifetime.png)
+  
   This module controls how the speed of particles is reduced over their lifetime.
 | **Property** | **Function** |
 | -------- | -------- |
@@ -216,6 +228,9 @@ Noise Module allows you to add variations to the movement of the particles.
 |Multiply by Velocity |  When enabled, faster particles are affected more by the drag coefficient.|
 
   ### Lifetime by Emitter Speed module
+
+ ![lifetime_by_emitter_speed](/img/lifetime_by_emitter_speed.png)
+  
   This module controls the initial lifetime of each particle based on the speed of the emitter when the particle spawns. It multiplies the start lifetime of particles by a value that depends on the speed of the object that spawned them. For most Particle Systems, this is the GameObject velocity, but for sub-emitters, the velocity comes from the parent particle that the sub-emitter particle originated from.
 <table>
     <thead>
@@ -247,6 +262,9 @@ Noise Module allows you to add variations to the movement of the particles.
 </table>
 
   ### Force over Lifetime module
+
+  ![force_over_lifetime](/img/force_over_lifetime.png)
+  
   Particles can be accelerated by forces (such as wind or attraction) that are specified in this module.
 | **Property** | **Function** |
 | -------- | -------- |
@@ -255,12 +273,18 @@ Noise Module allows you to add variations to the movement of the particles.
 |Randomize | 	When using the Two Constants or Two Curves modes, this causes a new force direction to be chosen on each frame within the defined ranges. This causes more turbulent, erratic movement.|
 
   ### Color over Lifetime module
+
+ ![color_over_lifetime](/img/color_over_lifetime.png)
+  
   This module specifies how a particle’s color and transparency changes over its lifetime.
 | **Property** | **Function** |
 | -------- | -------- |
 |Color  |  The color gradient of a particle over its lifetime. The very left-hand point of the gradient bar indicates the beginning of the particle’s life, and the very right-hand side of the gradient bar indicates the end of the particle’s life. In the image above, the particle starts off orange, fades in opacity over time, and is invisible by the time its life ends.|
 
   ### Size over Lifetime module
+
+ ![size_over_lifetime](/img/size_over_lifetime.png)
+  
   Many effects involve a particle changing size according to a curve, which can be set in this module.
 | **Property** | **Function** |
 | -------- | -------- |
@@ -268,6 +292,9 @@ Noise Module allows you to add variations to the movement of the particles.
 |Size | A curve which defines how the particle’s size changes over its lifetime.|
 
   ### Rotation over Lifetime Module
+
+ ![rotation_over_lifetime](/img/rotation_over_lifetime.png)
+  
   Here, you can configure particles to rotate as they move.
 | **Property** | **Function** |
 | -------- | -------- |
@@ -275,6 +302,9 @@ Noise Module allows you to add variations to the movement of the particles.
 |Angular Velocity | Sets the speed limit of the particles.|
 
 ## Inherit Velocity module
+
+ ![inherit_velocity](/img/inherit_velocity.png)
+
 This module is part of the Particle System component. When you create a new Particle System GameObject, or add a Particle System component to an exiting GameObject, Unity adds the Inherit Velocity module to the Particle System. By default, Unity disables this module.
 | **Property** | **Function** |
 | -------- | -------- |
@@ -315,6 +345,9 @@ Rotation By Speed Module allows you to adjusts the rotation of the particles bas
 |Speed Range|Used to adjust the range of the speed|
 
 ## Triggers Module
+
+![trigger](/img/trigger.png)
+
 The Built-in Particle System’s Triggers module allows you to access and modify particles based on their interaction with one or more Colliders in the Scene.
 
 ## Renderer Module
@@ -395,6 +428,9 @@ The result for the **Ribbon** is like this:
 ![Trails-Ribbon-Hasil](/img/Trails-Ribbon-Hasil.png)
 
 ## Custom Data Module
+
+![custom data](/img/custom data.png)
+
 The Custom Data module allows you to define custom data formats in the Editor to be attached to particles.
 
 ## Collision Module
